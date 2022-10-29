@@ -1,0 +1,24 @@
+<div class="logo-container">
+  <p class="logo">TUMSIFU</p>
+</div>
+<%= link_to "<<back home", root_path%>
+<h1 class="ens-head">Enseignants</h1>
+<div class="enseignants_container">
+  <div class="add_ens"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2tuZ7EV2y8VXt8Gml_HnSLo4Pl1zrAPgVA&usqp=CAU" class="add_ens_icon">
+    <p>ajouter un enseignant</p>
+  </div>
+  <% @enseignants.each do |e|%>
+    <div class="enseignant_item">
+      <img src="https://media.gettyimages.com/photos/engage-minds-picture-id522138534?k=20&m=522138534&s=612x612&w=0&h=WNUP7jARvJmhGsr5JLj8Vs0dgggvXOHZQ72AX9CuZVQ=" alt="enseignant-photo.jpg" class="ens_img">
+      <div class="enseignant_info">
+        <h1><%= e.nom%></h1>
+        <p><%= e.age%></p>
+        <p><%= e.diplome%></p>
+        <p><%= e.sexe%></p>
+        <div class="btn-ens-container">
+          <button class="btn-ens">Contact et details</button>
+        </div>
+      </div>
+    </div>
+  <% end %>   
+</div>
